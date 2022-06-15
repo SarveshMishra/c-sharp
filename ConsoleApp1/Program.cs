@@ -1,18 +1,18 @@
-﻿// Calculator Program
+﻿// Calculator float
 
-int num1;
-int num2;
+double num1;
+double num2;
 
 // Display title
-Console.WriteLine("Calculator Program");
+Console.WriteLine("Calculator");
 
 Console.WriteLine("Type a number, and then hit Enter");
 
-num1 = Convert.ToInt32(Console.ReadLine());
+num1 = Convert.ToDouble(Console.ReadLine());
 
 Console.WriteLine("Type another number, and then hit Enter");
 
-num2 = Convert.ToInt32(Console.ReadLine());
+num2 = Convert.ToDouble(Console.ReadLine());
 
 // Ask the user to choose an option.
 Console.WriteLine("Choose an option from the following list:");
@@ -36,7 +36,13 @@ switch (Console.ReadLine())
         Console.WriteLine($"Your result: {num1} * {num2} = {(num1 * num2)}");
         break;
     case "d":
-        Console.WriteLine($"Your result: {num1} / {num2} = {(num1 / num2)}");
+        // Ask the user to enter a non-zero divisor until they do so.
+        while (num2 == 0)
+        {
+            Console.WriteLine("Enter a non-zero divisor: ");
+            num2 = Convert.ToDouble(Console.ReadLine());
+        }
+        Console.WriteLine($"Your result: {num1} / {num2} = " + (num1 / num2));
         break;
 }
 // Wait for the user to respond before closing.
