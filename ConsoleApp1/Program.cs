@@ -1,7 +1,7 @@
 ﻿// Calculator Program
 
-int num1 = 0;
-int num2 = 0;
+int num1;
+int num2;
 
 // Display title
 Console.WriteLine("Calculator Program");
@@ -27,16 +27,16 @@ Console.Write("Your option? ");
 switch (Console.ReadLine())
 {
     case "a":
-        Console.WriteLine($"Your result: {num1} + {num2} = " + (num1 + num2));
+        Console.WriteLine($"Your result: {num1} + {num2} = {(num1 + num2)}");
         break;
     case "s":
-        Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
+        Console.WriteLine($"Your result: {num1} - {num2} = {(num1 - num2)}");
         break;
     case "m":
-        Console.WriteLine($"Your result: {num1} * {num2} = " + (num1 * num2));
+        Console.WriteLine($"Your result: {num1} * {num2} = {(num1 * num2)}");
         break;
     case "d":
-        Console.WriteLine($"Your result: {num1} / {num2} = " + (num1 / num2));
+        Console.WriteLine($"Your result: {num1} / {num2} = {(num1 / num2)}");
         break;
 }
 // Wait for the user to respond before closing.
